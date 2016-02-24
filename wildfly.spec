@@ -15,8 +15,8 @@
 %global wfuid 185
 
 Name:             wildfly
-Version:          9.0.1
-Release:          2%{?dist}
+Version:          10.0.0
+Release:          1%{?dist}
 Summary:          WildFly Application Server
 License:          LGPLv2+ and ASL 2.0 and GPLv2 with exceptions
 URL:              http://wildfly.org/
@@ -194,7 +194,7 @@ exit 0
 %{bindir}/*.properties
 %{bindir}/*.ps1
 %{bindir}/.jbossclirc
-%{bindir}/wildfly-launcher.jar
+%{bindir}/launcher.jar
 %{bindir}/client
 %{_bindir}/*
 %dir %{homedir}
@@ -239,6 +239,9 @@ exit 0
 %{_docdir}/%{name}
 
 %changelog
+* Wed Feb 24 2016 Marek Goldmann - 1:10.0.0-1
+- Upstream 10.0.0.Final release
+
 * Fri Aug 07 2015 Marek Goldmann - 1:9.0.1-2
 - Missed systemd-units BR
 
