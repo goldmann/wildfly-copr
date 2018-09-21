@@ -15,7 +15,7 @@
 %global wfuid 185
 
 Name:             wildfly
-Version:          11.0.0
+Version:          14.0.1
 Release:          1%{?dist}
 Summary:          WildFly Application Server
 License:          LGPLv2+ and ASL 2.0 and GPLv2 with exceptions
@@ -41,7 +41,7 @@ Obsoletes:        jboss-as < 7.1.1-22
 BuildArch:        noarch
 
 # Required for compiling JSP for example
-Requires:         java-devel >= 1:1.7
+Requires:         java-devel >= 1:1.8
 
 Requires(pre):    shadow-utils
 Requires(post):   systemd-units
@@ -194,7 +194,7 @@ exit 0
 %{bindir}/*.properties
 %{bindir}/*.ps1
 %{bindir}/.jbossclirc
-%{bindir}/launcher.jar
+%{bindir}/*.jar
 %{bindir}/client
 %{_bindir}/*
 %dir %{homedir}
@@ -239,6 +239,9 @@ exit 0
 %{_docdir}/%{name}
 
 %changelog
+* Sun Sep 23 2018 Ricardo Arguello - 1:14.0.1-1
+- Upstream 14.0.1.Final release
+
 * Wed Oct 25 2017 Ricardo Arguello - 1:11.0.0-1
 - Upstream 11.0.0.Final release
 
@@ -253,5 +256,3 @@ exit 0
 
 * Fri Aug 07 2015 Marek Goldmann - 1:9.0.1-1
 - Initial packaging of the all-in-one distribution
-
-
