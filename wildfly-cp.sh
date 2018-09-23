@@ -19,35 +19,35 @@ STANDALONE_XML="standalone.xml"
 
 while getopts “hc:l:p:” OPTION
 do
-     case $OPTION in
-         h)
-             usage
-             exit 1
-             ;;
-         c)
-             STANDALONE_XML=$OPTARG
-             ;;
-         l)
-             LOCATION=$OPTARG
-             ;;
-         p)
-             PORT_OFFSET=$OPTARG
-             ;;
-         ?)
-             usage
-             exit
-             ;;
-     esac
+    case $OPTION in
+        h)
+            usage
+            exit 1
+            ;;
+        c)
+            STANDALONE_XML=$OPTARG
+            ;;
+        l)
+            LOCATION=$OPTARG
+            ;;
+        p)
+            PORT_OFFSET=$OPTARG
+            ;;
+        ?)
+            usage
+            exit
+            ;;
+    esac
 done
 
 if [[ -z $LOCATION ]]
 then
-     usage
-     exit 1
+    usage
+    exit 1
 fi
 
 if [ "x$JBOSS_HOME" = "x" ]; then
-   JBOSS_HOME="/usr/share/jboss-as"
+    JBOSS_HOME="/usr/share/wildfly"
 fi
 
 mkdir -p ${LOCATION}/{bin,data,deployments,log,tmp,configuration}
@@ -73,4 +73,3 @@ if [ "x$PORT_OFFSET" != "x" ]; then
 fi
 
 echo -e "Directory ${LOCATION} is prepared to launch WildFly AS!\n\nYou can now boot your instance: ${LOCATION}/bin/standalone.sh"
-

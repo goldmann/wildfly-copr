@@ -9,4 +9,3 @@ if [[ "$1" == "domain" ]]; then
 else
     $WILDFLY_HOME/bin/standalone.sh -c $2 -b $3
 fi
-
