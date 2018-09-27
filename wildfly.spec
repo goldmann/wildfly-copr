@@ -21,7 +21,7 @@ Summary:          WildFly Application Server
 License:          LGPLv2+ and ASL 2.0 and GPLv2 with exceptions
 URL:              http://wildfly.org/
 
-Source0:          http://download.jboss.org/wildfly/%{namedversion}/wildfly-%{namedversion}.tar.gz
+Source0:          https://download.jboss.org/wildfly/%{namedversion}/wildfly-%{namedversion}.tar.gz
 
 # Makes possible to run WildFly AS in different directory by creating the structure and copying required configuration files
 Source1:          wildfly-cp.sh
